@@ -1,0 +1,104 @@
+Opdracht
+Opdracht
+
+In deze opdracht ga je Pokemon classes modelleren! Hieronder staat de minimaal verwachte functionaliteit beschreven waar de uitwerking van je opdracht aan moet voldoen. Zorg ervoor dat je de uitwerking heb gecommit en gepushed naar een github repository. De link naar de github repository lever je in voor deze opdracht.
+
+Maak voor elke class die je aanmaakt een eigen bestand aan. Maak tevens een index.php waarin je de werking van de objecten gaat demonstreren aan de hand van de functionele beschrijving. Gebruik de 'LAB - OOP - Superheroes' als voorbeeld.
+
+ 
+
+Let op: je mag alleen plain PHP gebruiken in je uitwerking! Dus geen externe libraries of frameworks.
+
+ 
+
+Functionele beschrijving:
+
+Pokemon
+heeft een naam
+heeft een EnergyType
+heeft hitpoints
+heeft health die gelijk is aan de waarde van de hitpoints
+heeft 1 of meerdere Attacks
+heeft een Weakness
+heeft een Resistance
+kan een andere Pokemon aanvallen met een Attack
+de schade van een Attack wordt vermenigvuldigd met de multiplier van de Weakness indien de EnergyType van de Weakness gelijk is aan de EnergyType van de aanvallende Pokemon
+de schade van een Attack wordt verminderd met de waarde van de Resistance indien de EnergyType van de Resistance gelijk is aan de EnergyType van de aanvallende Pokemon
+kan schade krijgen van een andere Pokemon als resultaat van een Attack
+de totale schade van een Attack wordt verminderd op de health van de Pokemon die wordt aangevallen
+EnergyType
+heeft een naam/type
+Attack
+heeft een naam
+doet schade (in hitpoints)
+Weakness
+heeft een EnergyType
+heeft een multiplier (vermenigvuldiger)
+Resistance
+heeft een EnergyType
+heeft een waarde
+Pikachu is een Pokemon
+heeft een zelf te verzinnen naam
+is van het EnergyType "Lightning"
+heeft 60 hitpoints
+heeft 2 attacks
+Electric Ring doet 50 schade
+Pika Punch doet 20 schade
+heeft een Weakness
+EnergyType "Fire" met een multiplier van 1,5
+heeft een Resistance
+EnergyType "Fighting" met een waarde van 20
+Charmeleon is een Pokemon
+heeft een zelf te verzinnen naam
+is van het EnergyType "Fire"
+heeft 60 hitpoints
+heeft 2 attacks
+"Head Butt" doet 10 schade
+"Flare" doet 30 schade
+heeft een Weakness
+EnergyType "Water" met een multiplier van 2
+heeft een Resistance
+EnergyType "Lightning" met een waarde van 10
+Als je klaar bent met het aanmaken van de classes laat je de pokemon als volgt tegen elkaar vechten:
+
+Pikachu valt Charmeleon aan met een Electric Ring attack
+Charmeleon valt Pikachu aan met een Flare attack
+Print voor en na de aanval de health uit van de pokemon die wordt aangevallen.
+
+ 
+
+Als onderdeel van de opdracht laat je je uitwerking controleren door een medestudent! Vraag aan een klasgenoot of hij je code wil bekijken en je opbouwende feedback geeft over de volgende zaken:
+
+code kwaliteit en gebruik van standaarden
+gebruik van commentaar om je classes en functies toe te lichten
+vind je klasgenoot de uitwerking volledig? Dus zijn alle fuinctionele vragen verwerkt in de opdracht.
+Voeg zijn/haar bevindingen toe tijdens het inleveren van opdracht!
+
+ 
+
+Versiebeheer
+
+Doe elke projectdag minimaal een commit (+push) naar de repository.
+
+ 
+
+Inleveren
+
+De urls naar de Git repositories én een zip-file/archive van de code als reactie inleveren.
+
+ 
+
+Succes!
+
+ 
+
+Update 16/3/2018:
+
+Extra functionele uitdaging indien je snel klaar bent met de bovenstaande opdracht (en je deze hebt laten beoordelen door een medestudent):
+
+PokeBag
+hier kunnen maximaal 10 pokemon objecten in opgeslagen/bewaard worden.
+er kan 1 pokemon per keer toegevoegd worden aan een PokeBag.
+er kan 1 pokemon per keer uitgehaald worden door de naam van de pokemon op te geven die in de PokeBag zit.
+er kan opgevraagd worden welke pokemon er in de PokeBag zitten (de namen van de pokemon worden teruggeven).
+het moet mogelijk zijn om alle pokemon in 1x te verwijderen uit de PokeBag.
