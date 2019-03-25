@@ -1,3 +1,4 @@
+<?php
 class Avenger extends Superhero {
 
     public $team = 'Avengers';

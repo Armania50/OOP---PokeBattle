@@ -1,6 +1,7 @@
 <?php
 
 require 'Superhero.php';
+require 'Avenger.php';
 
 $spiderman =  new Superhero('Spider-Man', 'Male', 'Spiderfriends', 'With great power comes great responsibility!');
  
