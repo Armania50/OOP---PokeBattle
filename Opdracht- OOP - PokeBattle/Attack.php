@@ -1,3 +1,4 @@
+    
 <?php
 class Attack
 {
@@ -11,14 +12,9 @@ class Attack
     public function getName(){
       return $this->attackName;
     }
-    public function setName(){
-      $this->Attackname = $attackName;
-    }
-//////////////////
     public function getDamage(){
       return $this->damage;
     }
-    public function setDamage(){
-      $this->damage = $damage;
-    }
 }
+
+// Test Completed

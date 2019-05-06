@@ -1,34 +1,54 @@
 <?php
 class Pokemon
 {
-    public $EnergyType;
-    public $Hitpoints;
-    public $Health;
-    public $Attack;
-    public $Weakness;
-    public $Resistance;
-    public function __construct($name, $energyType, $healthPoints, $hitPoints)
+    protected $energyType;
+    protected $hitPoints;
+    protected $health;
+    protected $attacks;
+    protected $weakness;
+    protected $resistance;
+    protected $name;
+
+    public function __construct($name, $energyType, $health, $hitPoints)
     {
-        $this->Name = $name;
-        $this->EnergyType = $energyType;
-        $this->Health = $healthPoints;
-        $this->Hitpoints = $hitPoints;
-        $this->Attack = [];
+        $this->name = $name;
+        $this->energyType = $energyType;
+        $this->health = $health;
+        $this->hitpoints = $hitPoints;
+        $this->attacks = [];
     }
-    function DoAttack($pokemon, $pokemon2, $target)
+
+    public function getName()
     {
-      echo "attack";
-        echo $this->Name . ' Will attack ' . $target->Name . ' Using ' . $this->Attack[0]->Name;
+      return $this->name;
+    }
+
+    public function getHealth()
+    {
+      return $this->health;
+    }
+
+    public function getHitPoints()
+    {
+      return $this->hitPoints;
+    }
+
+
+    function DoAttack($target)
+    {
+        echo $this->name . ' Will attack ' . $target->getName() . ' Using ' . $this->attacks[0]->getName();
         echo '<br>';
-        if ($pokemon->EnergyType == $pokemon2->Weakness->EnergyType) {
-            $pokemon2->Health = $pokemon2->Health - ($pokemon->Attack[0]->AttackPoints * $pokemon2->Weakness->Multiplier);
+        if ($this->energyType == $target->Weakness->energyType) {
+            $target->health = $target->health - ($this->attacks[0]->attackPoints * $target->weakness->multiplier);
         } else {
-            $pokemon2->Health = $pokemon2->Health - $pokemon->Attack[0]->AttackPoints;
+            $target->health = $target->health - $this->attacks[0]->attackPoints;
         }
-        if ($pokemon2->Health < 1) {
-            echo $pokemon2->Name . " Has Died ";
+
+        if ($target->health < 1) {
+            echo $target->name . " Has Died ";
         } else {
-            echo $pokemon2->Name . " Now Has " . $pokemon2->Health . " HP Left";
+            echo $target->name . " Now Has " . $target->health . " HP Left";
         }
     }
 }
+// Test Completed

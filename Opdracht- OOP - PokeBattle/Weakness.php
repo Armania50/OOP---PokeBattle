@@ -1,12 +1,22 @@
-    
 <?php
+
 class Weakness
 {
-    public $EnergyType;
-    public $Multiplier;
-    public function __construct($energyt, $multip)
+    public $energyType;
+    public $multiplier;
+
+    public function __construct($energyType, $multiplier)
     {
-        $this->EnergyType = $energyt;
-        $this->Multiplier = $multip;
+        $this->energyType = $energyType;
+        $this->multiplier = $multiplier;
+    }
+
+    public function getEnergyType(){
+      return $this->energyType;
+    }
+
+    public function getMultiplier(){
+      return $this->name;
     }
 }
+// Test Completed
