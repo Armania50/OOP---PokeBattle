@@ -1,12 +1,24 @@
-    
 <?php
 class Attack
 {
-    public $Name;
-    public $Damage;
-    Public function __construct($attname, $atp)
+    private $attackName;
+    private $damage;
+    Public function __construct($attackName, $attackPoints)
     {
-        $this->Name = $attname;
-        $this->AttackPoints = $atp;
+        $this->attackName = $attackName;
+        $this->attackPoints = $attackPoints;
+    }
+    public function getName(){
+      return $this->attackName;
+    }
+    public function setName(){
+      $this->Attackname = $attackName;
+    }
+//////////////////
+    public function getDamage(){
+      return $this->damage;
+    }
+    public function setDamage(){
+      $this->damage = $damage;
     }
 }
