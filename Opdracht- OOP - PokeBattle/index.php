@@ -13,7 +13,7 @@ require 'Pokemon.php';
 require 'Charmeleon.php';
 require 'Pikachu.php';
 require 'Attack.php';
-require 'Resistence.php';
+require 'Resistance.php';
 require 'Weakness.php';
 
 //Create new pokemon
